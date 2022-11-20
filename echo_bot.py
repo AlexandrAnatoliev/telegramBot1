@@ -1,5 +1,15 @@
+# telegramBot1
+
+# Взят со статьи из журнала Хакер
+# https://xakep.ru/2021/11/28/python-telegram-bots/
+
+# Эхо-бот
+# Wikipedia-бот
+# Бот с двумя виртуальными кнопками
+# Бот, ведущий Telegram-канал с анекдотами
+# Чат-бот «Маша»
+
 # echo_bot - эхо‑бот будет получать от пользователя текстовое сообщение и возвращать его.
-import os
 
 import telebot
 from config import token
