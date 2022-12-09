@@ -8,8 +8,9 @@
 # echo_bot - эхо‑бот будет получать от пользователя текстовое сообщение и возвращать его.
 
 import telebot
-from config import token
-
+#from config import token
+# добавляю токен -удалить
+token = "5969843689:AAFskKqCFHbh5pIHCkTQFPyStOVMRJl2G20"
 # Создаем бота
 bot = telebot.TeleBot(token)
 
