@@ -8,8 +8,8 @@
 # echo_bot - эхо‑бот будет получать от пользователя текстовое сообщение и возвращать его.
 
 import telebot
-# from config import token
-token = "5969843689:AAFskKqCFHbh5pIHCkTQFPyStOVMRJl2G20"
+from config import token
+
 # Загружаем список анекдотов из файла
 # если текстовый файл находится не в каталоге программы, то пишем полный путь к нему
 # "C:/Users/Александр/OneDrive/Рабочий стол/python/FreelanceTask2/freelanceTask3/firstText.txt" (использ.:'/'!)
