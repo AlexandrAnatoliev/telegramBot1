@@ -10,13 +10,6 @@
 import telebot
 from config import token
 
-# Загружаем список анекдотов из файла
-# если текстовый файл находится не в каталоге программы, то пишем полный путь к нему
-# "C:/Users/Александр/OneDrive/Рабочий стол/python/FreelanceTask2/freelanceTask3/firstText.txt" (использ.:'/'!)
-f = open('fun.txt', 'r', encoding='UTF-8')
-funs = f.read().split('\n')
-f.close()
-
 # Создаем бота
 bot = telebot.TeleBot(token)
 
@@ -30,8 +23,6 @@ def start(m, res=False):
 # Получение сообщений от юзера
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
-    # Проверка работы
-    bot.send_message(message.chat.id, funs[0])
     bot.send_message(message.chat.id, 'Вы написали: ' + message.text)
 
 
