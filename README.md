@@ -28,8 +28,15 @@ def start(m, res=False):
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
     bot.send_message(message.chat.id, 'Вы написали: ' + message.text)
+    files = open("photo.png", 'rb')  # открываем картинку
+    bot.send_photo(message.chat.id, photo=files, caption='фото')  # посылаем ее и текст к ней
 ```
-
+#### Посылаем картинку пользователю
+Размещаем файл с фото "photo.png" в рабочем каталоге. Добавляем текстовую часть к ней "caption='фото'"
+```python
+    files = open("photo.png", 'rb')  # открываем картинку
+    bot.send_photo(message.chat.id, photo=files, caption='фото')  # посылаем ее и текст к ней
+```
 #### Запускаем бота
 ```python
 bot.polling(none_stop=True, interval=0)
