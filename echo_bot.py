@@ -10,6 +10,8 @@
 import telebot
 from config import token
 
+
+
 # Создаем бота
 bot = telebot.TeleBot(token)
 
@@ -24,6 +26,8 @@ def start(m, res=False):
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
     bot.send_message(message.chat.id, 'Вы написали: ' + message.text)
+    files = open("photo.png", 'rb')  # открываем картинку
+    bot.send_photo(message.chat.id, photo=files)  # посылаем ее
 
 
 # Запускаем бота
